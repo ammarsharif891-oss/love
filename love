@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Izba ❤️ Ammar | New Year Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0018, #1a0033, #0a0018);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Welcome Section */
+#welcome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(ellipse at center, #3b005f 0%, #1a0033 40%, #050012 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#welcome::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="rgba(255,77,109,0.1)" d="M50,0C22.4,0,0,22.4,0,50s22.4,50,50,50s50-22.4,50-50S77.6,0,50,0z M50,86c-19.9,0-36-16.1-36-36S30.1,14,50,14 s36,16.1,36,36S69.9,86,50,86z"/></svg>');
+  opacity: 0.3;
+  animation: twinkle 20s linear infinite;
+}
+
+@keyframes twinkle {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-100px) translateX(100px); }
+}
+
+#welcome h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  background: linear-gradient(45deg, #ff4d6d, #ffb6c1, #ff4d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 30px rgba(255, 77, 109, 0.5);
+}
+
+#welcome p {
+  color: #ffc1d9;
+  margin: 20px 0 40px;
+  font-size: 22px;
+  max-width: 600px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+#startBtn {
+  padding: 20px 65px;
+  font-size: 28px;
+  background: linear-gradient(45deg, #ff4d6d, #ff85a2);
+  border: none;
+  border-radius: 60px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 40px #ff4d6d;
+  animation: pulse 1.8s infinite;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+#startBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+#startBtn:hover::before {
+  left: 100%;
+}
+
+#startBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px #ff4d6d;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 40px #ff4d6d; }
+  50% { transform: scale(1.08); box-shadow: 0 0 60px #ff4d6d; }
+  100% { transform: scale(1); box-shadow: 0 0 40px #ff4d6d; }
+}
+
+/* Main Content */
+#surprise {
+  display: none;
+  min-height: 100vh;
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#surprise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path fill="rgba(255,182,193,0.05)" d="M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0z M30,52c-12.2,0-22-9.8-22-22S17.8,8,30,8 s22,9.8,22,22S42.2,52,30,52z"/></svg>');
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.year {
+  font-size: 100px;
+  background: linear-gradient(45deg, #ff4d6d, #ffb6c1, #a663cc, #ff4d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  margin-bottom: 10px;
+  animation: colorShift 5s infinite alternate;
+  text-shadow: 0 0 20px rgba(166, 99, 204, 0.3);
+}
+
+@keyframes colorShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(30deg); }
+}
+
+.gf-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  color: #ffb6c1;
+  text-shadow: 0 0 40px #ff4d6d;
+  animation: glow 3s infinite alternate;
+  margin-bottom: 40px;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 20px #ff4d6d, 0 0 30px #ff4d6d; }
+  100% { text-shadow: 0 0 30px #ffb6c1, 0 0 50px #ff4d6d, 0 0 60px #ff4d6d; }
+}
+
+/* Photo Grid */
+.grid {
+  margin: 60px auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+.photo {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.3);
+  transition: all 0.5s ease;
+  position: relative;
+  height: 320px;
+}
+
+.photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7));
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo:hover::before {
+  opacity: 1;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.photo:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(255, 77, 109, 0.5);
+}
+
+.photo:hover img {
+  transform: scale(1.15);
+}
+
+/* Love Box */
+#loveBox {
+  margin: 80px auto 40px;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 1.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#loveBox::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,77,109,0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+#loveBox h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 55px;
+  color: #ffb6c1;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+#loveBox h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff4d6d, transparent);
+}
+
+#loveText {
+  margin-top: 20px;
+  color: #ffd6e8;
+  line-height: 1.9;
+  font-size: 20px;
+  text-align: center;
+  min-height: 180px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Romantic Section */
+.romantic {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 182, 193, 0.08);
+  border-radius: 20px;
+  border-left: 5px solid #ff4d6d;
+}
+
+.romantic-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  color: #ffb6c1;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.romantic-text {
+  font-size: 22px;
+  color: #ffd6e8;
+  line-height: 1.8;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.romantic-text:last-child {
+  margin-bottom: 0;
+}
+
+.heart-separator {
+  font-size: 30px;
+  color: #ff4d6d;
+  text-align: center;
+  margin: 20px 0;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Proposal */
+#proposalBtn {
+  margin: 50px auto 30px;
+  padding: 20px 50px;
+  font-size: 26px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff4d6d, #ff85a2);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 40px #ff4d6d;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 600;
+}
+
+#proposalBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px #ff4d6d;
+}
+
+#yesMsg {
+  display: none;
+  margin: 40px auto;
+  font-size: 65px;
+  font-family: 'Great Vibes', cursive;
+  color: #ffb6c1;
+  text-shadow: 0 0 50px #ff4d6d;
+  animation: pulse 2s infinite;
+}
+
+/* Music button */
+.musicBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff4d6d, #ff85a2);
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(255, 77, 109, 0.7);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.musicBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #ff4d6d;
+}
+
+/* Floating hearts */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 77, 109, 0.7);
+  font-size: 24px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #welcome h1 { font-size: 60px; }
+  .year { font-size: 70px; }
+  .gf-name { font-size: 50px; }
+  #loveBox h2 { font-size: 45px; }
+  #loveText { font-size: 18px; }
+  .romantic-title { font-size: 36px; }
+  .romantic-text { font-size: 19px; }
+  .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts Background -->
+<div class="floating-hearts" id="floatingHearts"></div>
+
+<!-- Welcome Section -->
+<div id="welcome">
+  <h1>Happy New Year, My Love</h1>
+  <p>As the clock strikes midnight and a new year begins, my heart only beats for you. Click to see our forever.</p>
+  <button id="startBtn">For Izba ❤️</button>
+</div>
+
+<!-- Main Content -->
+<div id="surprise">
+  <div class="year">2026</div>
+  <div class="gf-name">Izba Ijaz ❤️</div>
+
+  <!-- Photo Grid -->
+  <div class="grid">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Romantic couple"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?auto=format&fit=crop&w=800&q=80" alt="Love in the air"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Beautiful smile"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Romantic moment"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d5?auto=format&fit=crop&w=800&q=80" alt="Happy together"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Pure love"></div>
+  </div>
+
+  <!-- Love Message Box -->
+  <div id="loveBox">
+    <h2>My Dearest Izba ❤️</h2>
+    <div id="loveText"></div>
+  </div>
+
+  <!-- Romantic Section -->
+  <div class="romantic">
+    <div class="romantic-title">To The One Who Stole My Heart</div>
+    
+    <div class="romantic-text">
+      In your eyes, I found my home. In your smile, I found my peace. With every beat of my heart, I love you more.
+    </div>
+    
+    <div class="heart-separator">♥ ♥ ♥</div>
+    
+    <div class="romantic-text">
+      You are the first thought in my morning and the last dream in my night. Every moment with you is a page in my favorite story.
+    </div>
+    
+    <div class="heart-separator">♥ ♥ ♥</div>
+    
+    <div class="romantic-text">
+      As we step into 2025, I promise to love you more with each passing day. You are my forever and always.
+    </div>
+  </div>
+
+  <!-- Proposal -->
+  <button id="proposalBtn">
+    <i class="fas fa-heart"></i> Will You Be Mine Forever? <i class="fas fa-gem"></i>
+  </button>
+  <div id="yesMsg">She said YES! 💖</div>
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music Control Button -->
+<button class="musicBtn" id="musicBtn">
+  <i class="fas fa-music"></i>
+</button>
+
+<script>
+// DOM Elements
+const btn = document.getElementById("startBtn");
+const welcome = document.getElementById("welcome");
+const surprise = document.getElementById("surprise");
+const music = document.getElementById("bgMusic");
+const loveBox = document.getElementById("loveBox");
+const loveText = document.getElementById("loveText");
+const musicBtn = document.getElementById("musicBtn");
+const floatingHearts = document.getElementById("floatingHearts");
+const proposalBtn = document.getElementById("proposalBtn");
+const yesMsg = document.getElementById("yesMsg");
+
+// Create floating hearts
+function createFloatingHearts() {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+      heart.style.animationDuration = (Math.random() * 10 + 10) + "s";
+      heart.style.animationDelay = Math.random() * 5 + "s";
+      floatingHearts.appendChild(heart);
+      
+      // Remove heart after animation completes
+      setTimeout(() => {
+        heart.remove();
+      }, 15000);
+    }, i * 300);
+  }
+}
+
+// Start the page
+btn.onclick = () => {
+  welcome.style.display = "none";
+  surprise.style.display = "block";
+  
+  // Start music with fade in
+  music.volume = 0;
+  music.play();
+  let v = 0;
+  let fade = setInterval(() => {
+    v += 0.02;
+    music.volume = v;
+    if (v >= 0.5) clearInterval(fade);
+  }, 100);
+  
+  // Create floating hearts
+  createFloatingHearts();
+  setInterval(createFloatingHearts, 15000);
+  
+  // Show love box with typing effect
+  setTimeout(() => {
+    loveBox.style.opacity = 1;
+    typeText();
+  }, 1500);
+};
+
+// Music button toggle
+musicBtn.onclick = () => {
+  if (music.paused) {
+    music.play();
+    musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+  } else {
+    music.pause();
+    musicBtn.innerHTML = '<i class="fas fa-play"></i>';
+  }
+};
+
+// Love message to type
+const msg = `My dearest Izba,
+
+As we welcome 2025, I want you to know that my love for you grows stronger with each passing day. You are the most beautiful part of my life, my greatest joy, and my forever happiness.
+
+With you, every moment is magical. Your smile lights up my world, your laugh is my favorite melody, and your love is the greatest gift I've ever received.
+
+This new year, I renew my promise to cherish you, respect you, and love you more deeply than ever before. You are my everything.
+
+Forever yours,
+Ammar ❤️`;
+
+// Typing effect for love message
+function typeText() {
+  let i = 0;
+  loveText.innerHTML = "";
+  let t = setInterval(() => {
+    loveText.innerHTML += msg.charAt(i);
+    i++;
+    if (i >= msg.length) clearInterval(t);
+  }, 20);
+}
+
+// Proposal button effect
+proposalBtn.onclick = () => {
+  yesMsg.style.display = "block";
+  proposalBtn.style.display = "none";
+  
+  // Create heart explosion
+  for (let i = 0; i < 80; i++) {
+    setTimeout(() => {
+      let h = document.createElement("div");
+      h.innerHTML = i % 3 === 0 ? "💖" : i % 3 === 1 ? "💕" : "💝";
+      h.style.position = "fixed";
+      h.style.left = Math.random() * 100 + "vw";
+      h.style.top = "80vh";
+      h.style.fontSize = (Math.random() * 30 + 25) + "px";
+      h.style.zIndex = "9999";
+      h.style.pointerEvents = "none";
+      document.body.appendChild(h);
+      
+      // Falling animation with random direction
+      let x = (Math.random() - 0.5) * 200;
+      let duration = Math.random() * 3 + 2;
+      
+      h.animate([
+        { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
+        { transform: `translate(${x}px, -100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+      ], {
+        duration: duration * 1000,
+        easing: "cubic-bezier(0.215, 0.61, 0.355, 1)"
+      });
+      
+      // Remove element after animation
+      setTimeout(() => {
+        h.remove();
+      }, duration * 1000);
+    }, i * 50);
+  }
+  
+  // Play romantic sound (if available)
+  const romanticSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-romantic-heartbeat-1152.mp3');
+  romanticSound.volume = 0.3;
+  romanticSound.play();
+};
+
+// Initialize floating hearts on welcome page
+createFloatingHearts();
+</script>
+
+</body>
+</html>
